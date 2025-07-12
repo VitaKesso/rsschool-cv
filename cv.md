@@ -1,10 +1,10 @@
 # Vita Kesso
 
-![avatar](./photo/avatar.jpeg)
+![avatar](./photo/avatar.jpeg=500X750)
 
 ## Use instagram to contact me: __@vitabubochka__
 
-### Hi, I end up with my tutor career right now to prioritize mental health and self-development first. I have awesome dog Yumi and I like making web-pages about her, using a lot of funny photos. And since june I have become a bride, woohoo! I like my new status as much as my fiance! 
+#### Hi, I end up with my tutor career right now to prioritize mental health and self-development first. I have awesome dog Yumi and I like making web-pages about her, using a lot of funny photos. And since june I have become a bride, woohoo! I like my new status as much as my fiance! 
 
 ## Skills
 * HTML
@@ -78,15 +78,15 @@ def callback_message(callback):
 bot.polling(none_stop=True) 	
 ```
 ## Work experience
-### 2021 - 2025: I`ve been working as English tutor
-### 2024 - ... : I fused my regular job with programmer studing
+#### 2021 - 2025: I`ve been working as English tutor
+#### 2024 - ... : I fused my regular job with programmer studing
 
 ## Education
-### 2016 - 2021: Yanka Kupala State University of Grodno
-### 2021 - ... : ***a lot of courses***
+#### 2016 - 2021: Yanka Kupala State University of Grodno
+#### 2021 - ... : ***a lot of courses***
 
 ## Languages
-### My English is very bad (I confused that nobody of my students didn\`t notice, they still think I\`m C1)
-### Russian native speacker
-### Japanese a little bit yamete kudasai
+#### My English is very bad (I confused that nobody of my students didn\`t notice, they still think I\`m C1)
+#### Russian native speacker
+#### Japanese a little bit yamete kudasai
 
