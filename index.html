@@ -2,6 +2,9 @@
 <html lang="en">
 	<head>
 		<title>VitaKesso</title>
+        <style>
+            body{background-color:aliceblue}
+        </style>
 	</head>
 	<body>
         <h1>Vita Kesso</h1>
@@ -13,30 +16,41 @@
         </p>
         <em>Use instagram to contact me: @vitabubochka</em>
         <h2>Skills</h2>
-        <p>
         <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>Git</li>
             <li>Python</li>
         </ul>
-        </p>
         <h2>Code examples</h2>
+        <pre>
+            <code>
+            @bot.callback_query_handler(func=lambda callback: True)
+            def callback_message(callback):
+                if callback.data =='select':
+                    markup = types.InlineKeyboardMarkup()
+                    markup.add(types.InlineKeyboardButton('МК свитер', callback_data='choose'))
+                    bot.send_photo(chat_id=callback.message.chat.id, caption="""✨на данный момент доступны эти мастер-классы, но я буду пополнять этот список как платными, так и бесплатными уроками!""", reply_markup=markup, photo=open('photo/2photo.jpg','rb'))
+                elif callback.data=='choose':
+                    markup = types.InlineKeyboardMarkup()
+                    markup.add(types.InlineKeyboardButton('купить и вязать!!', callback_data='pay'))
+                    bot.send_photo(chat_id=callback.message.chat.id, caption=sweater_description, reply_markup=markup, photo=open('photo/sweater.jpg','rb'))		
+                elif callback.data=='pay':
+                    bot.send_invoice(chat_id=callback.message.chat.id, title="✨оплата✨", description="🌸после оплаты тебе прилетит видео мастер-класс прямо сюда!", invoice_payload="payload", currency="XTR", prices=[telebot.types.LabeledPrice("500", 500)], provider_token=None)
+            bot.polling(none_stop=True) 	
+            </code>
+        </pre>
         <h2>Work experience</h2>
         <dl>
-        <p>
             <dt>2021 - 2025:</dt>
             <dd>I`ve been working as English tutor</dd>
-        </p>
             <dt>2024 - ... :</dt>
             <dd>I fused my regular job with programmer studing</dd>
         </dl>
         <h2>Education</h2>
         <dl>
-        <p>
             <dt>2016 - 2021:</dt>
             <dd>Yanka Kupala State University of Grodno</dd>
-        </p>
             <dt>2021 - ... :</dt>
             <dd><strong>a lot of courses</strong></dd>
         </dl>
