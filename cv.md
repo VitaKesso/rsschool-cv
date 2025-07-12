@@ -1,6 +1,6 @@
 # Vita Kesso
 
-![avatar](./photo/avatar.jpeg=500X750)
+![avatar](./photo/avatar.jpg)
 
 ## Use instagram to contact me: __@vitabubochka__
 
