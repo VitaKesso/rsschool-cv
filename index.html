@@ -2,19 +2,22 @@
 <html lang="en">
 	<head>
 		<title>VitaKesso</title>
-        <style>
-            body{background-color:aliceblue}
-        </style>
+        <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
+        <img src="photo/avatar.jpg" style="float: left; margin-right: 10%;" alt="avatar">
         <h1>Vita Kesso</h1>
-        <img src="photo/avatar.jpg" alt="avatar">
         <p>
             Hi, I end up with my tutor career right now to prioritize mental health and self-development first.<br> 
             I have awesome dog Yumi and I like making web-pages about her, using a lot of funny photos. And since june I have become a bride, woohoo!<br> 
             I like my new status as much as my fiance!<br>
         </p>
-        <em>Use instagram to contact me: @vitabubochka</em>
+        <h2>Contacts</h2>
+        <ul>
+            <li>Instagram - @vitabubochka</li>
+            <li>Discord - vita__444_07260</li>
+            <li>GitHub - VitaKesso</li>
+        </ul>
         <h2>Skills</h2>
         <ul>
             <li>HTML</li>
@@ -30,13 +33,14 @@
                 if callback.data =='select':
                     markup = types.InlineKeyboardMarkup()
                     markup.add(types.InlineKeyboardButton('МК свитер', callback_data='choose'))
-                    bot.send_photo(chat_id=callback.message.chat.id, caption="""✨на данный момент доступны эти мастер-классы, но я буду пополнять этот список как платными, так и бесплатными уроками!""", reply_markup=markup, photo=open('photo/2photo.jpg','rb'))
+                    bot.send_photo(chat_id=callback.message.chat.id, caption="""✨доступны мастер-классы!""", reply_markup=markup, photo=open('photo/2photo.jpg','rb'))
                 elif callback.data=='choose':
                     markup = types.InlineKeyboardMarkup()
                     markup.add(types.InlineKeyboardButton('купить и вязать!!', callback_data='pay'))
                     bot.send_photo(chat_id=callback.message.chat.id, caption=sweater_description, reply_markup=markup, photo=open('photo/sweater.jpg','rb'))		
                 elif callback.data=='pay':
-                    bot.send_invoice(chat_id=callback.message.chat.id, title="✨оплата✨", description="🌸после оплаты тебе прилетит видео мастер-класс прямо сюда!", invoice_payload="payload", currency="XTR", prices=[telebot.types.LabeledPrice("500", 500)], provider_token=None)
+                    bot.send_invoice(chat_id=callback.message.chat.id, title="✨оплата✨", description="🌸после оплаты тебе прилетит видео мастер-класс прямо сюда!", 
+                        invoice_payload="payload", currency="XTR", prices=[telebot.types.LabeledPrice("500", 500)], provider_token=None)
             bot.polling(none_stop=True) 	
             </code>
         </pre>
@@ -47,6 +51,10 @@
             <dt>2024 - ... :</dt>
             <dd>I fused my regular job with programmer studing</dd>
         </dl>
+        <h2>My projects</h2>
+        <p>At this moment I have only one project
+        <a href="https://github.com/VitaKesso/rsschool-cv/tree/rsschool-cv-html">CV#3</a>
+        </p>
         <h2>Education</h2>
         <dl>
             <dt>2016 - 2021:</dt>
@@ -60,5 +68,10 @@
             <li>Russian native speacker</li>
             <li>Japanese a little bit <em>yamete kudasai</em></li>
         </ul>
-	</body>
+        <footer>
+            <a href="https://github.com/VitaKesso"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NHHauAPXDzZS3M15I4hrYuIZSi004LnYZA&s" height="30"></a>
+            2025
+            <a href="https://rs.school/courses/javascript-ru"><img src="https://raw.githubusercontent.com/rolling-scopes-school/tasks/a2a648a704a2eee3e2013b9e13bee765ab00f959/tasks/cv/rs-school-logo.svg" height="30"></a>
+        </footer>
+    </body>
 </html>
