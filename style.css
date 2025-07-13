@@ -1,0 +1,25 @@
+body {
+    background-color: aliceblue;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1 {
+    color: midnightblue
+}
+
+h2 {
+    color: midnightblue
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 80px;
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+footer {
+    margin-left: 80%;
+    font-size: 40px;
+}
