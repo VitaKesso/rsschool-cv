@@ -58,11 +58,11 @@
                         elif callback.data=='choose':
                             markup = types.InlineKeyboardMarkup()
                             markup.add(types.InlineKeyboardButton('купить и вязать!!', callback_data='pay'))
-                            bot.send_photo(chat_id=callback.message.chat.id, caption=sweater_description, reply_markup=markup, photo=open('photo/sweater.jpg','rb'))		
+                            bot.send_photo(chat_id=callback.message.chat.id, caption=sweater_description, reply_markup=markup, photo=open('photo/sweater.jpg','rb'))
                         elif callback.data=='pay':
-                            bot.send_invoice(chat_id=callback.message.chat.id, title="✨оплата✨", description="🌸после оплаты тебе прилетит видео мастер-класс прямо сюда!", 
+                            bot.send_invoice(chat_id=callback.message.chat.id, title="✨оплата✨", description="🌸после оплаты тебе прилетит видео мастер-класс прямо сюда!",
                                 invoice_payload="payload", currency="XTR", prices=[telebot.types.LabeledPrice("500", 500)], provider_token=None)
-                    bot.polling(none_stop=True) 	
+                    bot.polling(none_stop=True)
                     </code>
                 </pre>
             </section>
