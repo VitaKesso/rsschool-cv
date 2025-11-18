@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VitaKesso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#contacts">contacts</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#code">code</a></li>
+                <li><a href="#work">work</a></li>
+                <li><a href="#project">project</a></li>
+                <li><a href="#education">education</a></li>
+                <li><a href="#languages">languages</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img class="img" src="photo/avatar.jpg" alt="avatar">
+        <h1>Vita Kesso</h1>
+        <p>
+            Hi, I end up with my tutor career right now to prioritize mental health and self-development first.<br>
+            I have awesome dog Yumi and I like making web-pages about her, using a lot of funny photos. And since june I
+            have become a bride, woohoo!<br>
+            I like my new status as much as my fiance!<br>
+        </p>
+        <div>
+            <section id="contacts">
+                <h2>Contacts</h2>
+                <ul>
+                    <li>Instagram - @vitabubochka</li>
+                    <li>Discord - vita__444_07260</li>
+                    <li>GitHub - VitaKesso</li>
+                </ul>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Git</li>
+                    <li>Python</li>
+                </ul>
+            </section>
+            <section id="code">
+                <h2>Code examples</h2>
+                <pre>
+                    <code>
+                    @bot.callback_query_handler(func=lambda callback: True)
+                    def callback_message(callback):
+                        if callback.data =='select':
+                            markup = types.InlineKeyboardMarkup()
+                            markup.add(types.InlineKeyboardButton('МК свитер', callback_data='choose'))
+                            bot.send_photo(chat_id=callback.message.chat.id, caption="""✨доступны мастер-классы!""", reply_markup=markup, photo=open('photo/2photo.jpg','rb'))
+                        elif callback.data=='choose':
+                            markup = types.InlineKeyboardMarkup()
+                            markup.add(types.InlineKeyboardButton('купить и вязать!!', callback_data='pay'))
+                            bot.send_photo(chat_id=callback.message.chat.id, caption=sweater_description, reply_markup=markup, photo=open('photo/sweater.jpg','rb'))
+                        elif callback.data=='pay':
+                            bot.send_invoice(chat_id=callback.message.chat.id, title="✨оплата✨", description="🌸после оплаты тебе прилетит видео мастер-класс прямо сюда!",
+                                invoice_payload="payload", currency="XTR", prices=[telebot.types.LabeledPrice("500", 500)], provider_token=None)
+                    bot.polling(none_stop=True)
+                    </code>
+                </pre>
+            </section>
+            <section id="work">
+                <h2>Work experience</h2>
+                <dl>
+                    <dt>2021 - 2025:</dt>
+                    <dd>I`ve been working as English tutor</dd>
+                    <dt>2024 - ... :</dt>
+                    <dd>I fused my regular job with programmer studing</dd>
+                </dl>
+            </section>
+            <section id="project">
+                <h2>My projects</h2>
+                <p>At this moment I have only one project
+                    <a href="https://github.com/VitaKesso/rsschool-cv/tree/rsschool-cv-html">CV#3</a>
+                </p>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <dl>
+                    <dt>2016 - 2021:</dt>
+                    <dd>Yanka Kupala State University of Grodno</dd>
+                    <dt>2021 - ... :</dt>
+                    <dd><strong>a lot of courses</strong></dd>
+                </dl>
+            </section>
+            <section id="languages">
+                <h2>Languages</h2>
+                <ul>
+                    <li>My English is very bad (I confused that nobody of my students didn`t notice, they still think
+                        I`m C1)</li>
+                    <li>Russian native speacker</li>
+                    <li>Japanese a little bit <em>yamete kudasai</em></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <a href="https://github.com/VitaKesso"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0NHHauAPXDzZS3M15I4hrYuIZSi004LnYZA&s"
+                height="30" alt="github"></a>
+        2025
+        <a href="https://rs.school/courses/javascript-ru"><img
+                src="https://raw.githubusercontent.com/rolling-scopes-school/tasks/a2a648a704a2eee3e2013b9e13bee765ab00f959/tasks/cv/rs-school-logo.svg"
+                height="30" alt="rs school"></a>
+    </footer>
+</body>
+</html>
